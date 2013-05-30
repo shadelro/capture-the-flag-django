@@ -8,4 +8,4 @@ DEPLOYMENT_MODE = 'local'
 
 SITE_ROOT_URI = 'http://capturetheflag.com:8001/'
 
-DEBUG = False
+DEBUG = True

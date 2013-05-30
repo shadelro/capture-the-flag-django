@@ -1,7 +1,7 @@
-<a href="{% url home%}">Home</a>
+<a href="{% url 'home' %}">Home</a>
 <h1>Active Players:</h1>
 <ul>
 {% for player in players %}
-    <li><a href="{% url get_player player.player_name %}">{{ player.player_name }}</a></li>
+    <li><a href="{% url 'get_player' player.player_name %}">{{ player.player_name }}</a></li>
 {% endfor %}
 </ul>

@@ -1,11 +1,11 @@
-<a href="{% url home%}">Home</a>
+<a href="{% url 'home' %}">Home</a>
 <h1>Active Games:</h1>
 <ul>
   {% for game in active_games %}
-    <li><a href="{% url get_game game.game_name %}">{{ game.game_name }}</a></li>
+    <li><a href="{% url 'get_game' game.game_name %}">{{ game.game_name }}</a></li>
     <ul>
       {% for player_name in game.player_list %}
-        <li><a href="{% url get_player player_name %}">{{ player_name }}</a></li>
+        <li><a href="{% url 'get_player' player_name %}">{{ player_name }}</a></li>
       {% endfor %}
     </ul>
   {% endfor %}
@@ -14,10 +14,10 @@
 <h1>Inactive Games:</h1>
 <ul>
   {% for game in inactive_games %}
-    <li><a href="{% url get_game game.game_name %}">{{ game.game_name }}</a></li>
+    <li><a href="{% url 'get_game' game.game_name %}">{{ game.game_name }}</a></li>
     <ul>
       {% for player_name in game.player_list %}
-        <li><a href="{% url get_player player_name %}">{{ player_name }}</a></li>
+        <li><a href="{% url 'get_player' player_name %}">{{ player_name }}</a></li>
       {% endfor %}
     </ul>
   {% endfor %}
